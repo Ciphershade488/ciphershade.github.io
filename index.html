@@ -11,7 +11,8 @@
     <header>
         <h1>🚀 Bug Bounty for Beginners</h1>
         <p>Learn Ethical Hacking & Start Earning from Bug Bounties!</p>
-        <a href="#pricing" class="btn">Enroll Now</a>
+        <button class="btn" onclick="enrollNow()">Enroll Now</button>
+        <button class="btn dark-mode-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
     </header>
 
     <section id="why">
@@ -24,23 +25,15 @@
         </ul>
     </section>
 
-    <section id="modules">
-        <h2>What You’ll Learn</h2>
-        <div class="module">
-            <h3>📌 Module 1: Introduction to Bug Bounties</h3>
-            <p>Learn about bug bounty platforms and how ethical hacking works.</p>
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3 onclick="toggleFAQ(1)">❓ Do I need coding experience? ⬇</h3>
+            <p id="faq1" class="faq-answer">No! This course is designed for beginners with no prior coding experience.</p>
         </div>
-        <div class="module">
-            <h3>🛠️ Module 2: Setting Up Your Hacking Lab</h3>
-            <p>Install Burp Suite, Postman, and recon tools.</p>
-        </div>
-        <div class="module">
-            <h3>⚡ Module 3: Finding & Exploiting Bugs</h3>
-            <p>Learn XSS, IDOR, API leaks, and S3 misconfigurations.</p>
-        </div>
-        <div class="module">
-            <h3>📜 Module 4: Reporting & Getting Paid</h3>
-            <p>Write detailed reports and earn bounties!</p>
+        <div class="faq-item">
+            <h3 onclick="toggleFAQ(2)">❓ How long is the course? ⬇</h3>
+            <p id="faq2" class="faq-answer">It’s a 4-6 week program with self-paced videos and live Q&A sessions.</p>
         </div>
     </section>
 
@@ -58,13 +51,15 @@
             <h3>Premium (1:1 Mentorship)</h3>
             <p>₹9,999 / $120</p>
         </div>
-        <a href="#" class="btn">Enroll Now</a>
+        <button class="btn" onclick="enrollNow()">Enroll Now</button>
     </section>
 
     <footer>
         <p>👨‍💻 Instructor: Gaurav | Security Researcher & Bug Bounty Hunter</p>
         <p>📌 Contact: <a href="https://www.instagram.com/hiphopking_488/">Instagram</a> | <a href="t.me/Ciphershade488">Telegram</a></p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
