@@ -247,7 +247,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 mx-auto text-center">
                 <p class="text-muted">Feel free to contact us for cybersecurity training, exam vouchers, collaborations, or general inquiries.</p>
-                <p><strong>Email:</strong> Ciphershade@gmail.com</p>
+                <p><strong>Email:</strong> <a href="mailto:Ciphershade@gmail.com">Ciphershade@gmail.com</a></p>
                 <p><strong>Instagram:</strong> <a href="https://www.instagram.com/ciphershade488/" target="_blank">@ciphershade488</a></p>
                 <p><strong>Telegram:</strong> <a href="https://t.me/Ciphershade488" target="_blank">t.me/Ciphershade488</a></p>
             </div>
@@ -255,83 +255,29 @@
     </div>
 </section>
 
-
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                    </div>
-                </div>
+<!-- Footer-->
+<footer class="footer py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-lg-start">Copyright &copy; Ciphershade 2024</div>
+            <div class="col-lg-4 my-3 my-lg-0">
+                <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ciphershade488/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-dark btn-social mx-2" href="https://t.me/Ciphershade488" target="_blank" aria-label="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/gaurav-shukla-ciphershade-%E2%9C%A8-ab9b892b4/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
-        </footer>
-
-        <!-- Portfolio Modals-->
-<div id="portfolioModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle"></h2>
-        <p id="modalDescription"></p>
-        <p><strong>Client:</strong> <span id="modalClient"></span></p>
-        <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+            <div class="col-lg-4 text-lg-end">
+                <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+            </div>
+        </div>
     </div>
-</div>
-
-<script>
-    const projects = [
-        {
-            title: "Blind XSS in Contact Form",
-            description: "Discovered a Blind XSS vulnerability in a website's contact form, leading to stored XSS execution in admin panels.",
-            client: "Confidential",
-            category: "Web Security",
-        },
-        {
-            title: "Youverse ID S3 Bucket Misconfiguration",
-            description: "Found an unauthenticated S3 bucket allowing arbitrary file uploads, posing a security risk.",
-            client: "Youverse ID",
-            category: "Cloud Security",
-        },
-        {
-            title: "Automox User Activity Exposure",
-            description: "Identified multiple Automox community URLs exposing user activities via ID enumeration.",
-            client: "Automox",
-            category: "Privacy Issue",
-        },
-        {
-            title: "Syfe Cloudflare Challenge Leak",
-            description: "Discovered Syfe's Cloudflare challenge endpoint exposing unnecessary challenge responses instead of a proper error page.",
-            client: "Syfe",
-            category: "Misconfiguration",
-        },
-        {
-            title: "Kaseya SQL Query Exposure",
-            description: "Found an exposed SQL query in an article page on Kaseya's website, indicating potential database leaks.",
-            client: "Kaseya",
-            category: "Database Security",
-        }
-    ];
-
-    function openModal(index) {
-        const project = projects[index];
-        document.getElementById('modalTitle').innerText = project.title;
-        document.getElementById('modalDescription').innerText = project.description;
-        document.getElementById('modalClient').innerText = project.client;
-        document.getElementById('modalCategory').innerText = project.category;
-        document.getElementById('portfolioModal').style.display = 'block';
-    }
-
-    function closeModal() {
-        document.getElementById('portfolioModal').style.display = 'none';
-    }
-</script>
+</footer>
 
         
         <!-- Bootstrap core JS-->
