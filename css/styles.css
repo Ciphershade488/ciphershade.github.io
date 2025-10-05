@@ -38,7 +38,7 @@ body {
     margin: 0;
     font-family: var(--bs-body-font-family);
     line-height: 1.6; 
-    color: var(--bs-body-color);
+    color: #e0e0e0;
     background-color: var(--cs-dark);
     background-attachment: fixed;
 }
@@ -191,7 +191,7 @@ header.masthead .masthead-heading {
     background-color: transparent !important;
     color: #e0e0e0;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important; 
-    padding: 0.75rem 0 !important; /* Proper vertical spacing for list items */
+    padding: 0.75rem 0 !important; 
     text-align: left;
     line-height: 1.2;
 }
@@ -218,7 +218,7 @@ header.masthead .masthead-heading {
     border-color: #333 !important;
     transition: color 0.3s;
 }
-.footer a.link-dark:hover, .footer a.btn-dark:hover {
+.footer a.btn-dark:hover {
     color: var(--cs-primary) !important;
 }
 
