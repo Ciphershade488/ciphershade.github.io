@@ -176,23 +176,34 @@ header.masthead .masthead-heading {
     text-shadow: 0 0 8px var(--cs-secondary);
     margin-bottom: 1rem;
 }
+/* FIX 1: Adjusting the image container size and alignment */
 .img-slot {
-    height: 80px;
+    /* Gave it a max height instead of fixed height for flexibility */
+    max-height: 80px; 
+    min-height: 50px; /* Minimum height for alignment */
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px dashed rgba(var(--cs-shadow-color), 0.3); 
     border-radius: 5px;
-    font-size: 0.8rem;
-    color: #555;
     background-color: #111;
+    overflow: hidden; /* Ensure content stays within the slot */
 }
+/* FIX 2: Ensuring the image scales correctly without cropping */
+.img-slot img {
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    /* object-fit: contain scales the image down to fit entirely within the container */
+    object-fit: contain; 
+}
+
 .list-group-item {
     background-color: transparent !important;
     color: #e0e0e0;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important; 
-    /* FINAL FIX: Adjusted vertical padding to 0.6rem for optimal line spacing */
     padding: 0.6rem 0 !important; 
     text-align: left;
     line-height: 1.2;
@@ -209,11 +220,11 @@ header.masthead .masthead-heading {
 
 /* --- EXTRA SERVICE & CONTACT SPACING FIX --- */
 .extra-service-heading {
-    margin-top: 3rem; /* Space above Extra Service heading */
-    margin-bottom: 1rem; /* Space below Extra Service heading */
+    margin-top: 3rem; 
+    margin-bottom: 1rem; 
 }
 .contact-section-margin {
-    margin-top: 4rem; /* Space above Contact Heading/Button group */
+    margin-top: 4rem; 
 }
 
 /* --- FOOTER --- */
@@ -226,7 +237,7 @@ header.masthead .masthead-heading {
 .footer a.link-dark, .footer a.btn-dark {
     color: #a0a0a0 !important;
     background-color: #222 !important;
-    border-color: #333 ! проводят !important;
+    border-color: #333 !important;
     transition: color 0.3s;
 }
 .footer a.btn-dark:hover {
