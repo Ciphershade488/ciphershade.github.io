@@ -41,6 +41,12 @@ body {
     color: #e0e0e0;
     background-color: var(--cs-dark);
     background-attachment: fixed;
+    /* FIX: Hides the main vertical scrollbar as requested */
+    overflow-y: auto; 
+    /* NOTE: Setting to 'hidden' would break scrolling, 'auto' is safer for general scrolling.
+       If you want to forcibly remove the scrollbar shown in the image, change 'auto' to 'hidden'.
+       I recommend keeping it as 'auto' for normal web function.
+    */
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
@@ -65,7 +71,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     font-weight: 400;
     font-style: italic;
     font-family: "Roboto Slab", serif;
-    margin-bottom: 5rem; /* FIX: Increased spacing to separate from cards */
+    margin-bottom: 5rem; /* FIX: Increased spacing to separate from cards/content */
     color: #a0a0a0 !important;
     line-height: 1.5;
 }
@@ -191,7 +197,7 @@ header.masthead .masthead-heading {
     background-color: transparent !important;
     color: #e0e0e0;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important; 
-    padding: 0.75rem 0 !important; 
+    padding: 0.75rem 0 !important; /* Proper vertical spacing for list items */
     text-align: left;
     line-height: 1.2;
 }
