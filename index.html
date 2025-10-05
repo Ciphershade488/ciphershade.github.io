@@ -1,263 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Ciphershade - Cybersecurity | Bug Bounty</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand text-uppercase fw-bold" href="#home">CipherShade</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
-                <li class="nav-item"><a class="nav-link" href="#shop">Vouchers</a></li>
-                <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li> <!-- Fixed ID -->
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CipherShade — Creative & Cyber Services</title>
+  <meta name="description" content="Website design, video editing, jingles, web testing, streaming accounts, software, cybersecurity vouchers and more." />
+  <style>
+    :root{--accent:#6c63ff;--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071020 0%, #071627 60%);color:#e6eef6}
+    .container{max-width:1100px;margin:36px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#5b4bff,#2bd4ff);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0;color:var(--muted)}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);padding:18px;border-radius:12px}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
+    .service-item{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);min-height:84px}
+    .service-item h3{margin:6px 0 4px 0;font-size:15px}
+    .muted{color:var(--muted);font-size:13px}
+    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#e6eef6}
+    .list{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+    footer{margin-top:24px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);font-size:13px}
+    @media (max-width:880px){.hero{grid-template-columns:1fr}}
+    .badge{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600}
+    .grid-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+    .service-check{font-weight:700}
+    .contact{margin-top:12px}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">CS</div>
+        <div>
+          <h1>CipherShade — Creative & Cyber Services</h1>
+          <p class="lead">Website design · Video editing · Music jingles · Web testing · Cybersecurity vouchers · Streaming & tools</p>
         </div>
-    </div>
-</nav>
+      </div>
+      <div class="badge">WELCOME SIR/MA'AM 😊</div>
+    </header>
 
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">Welcome to CipherShade!</div>
-                <div class="masthead-heading text-uppercase">Unveiling the Shadows of Cybersecurity</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
-            </div>
-        </header>
-        <!-- Services-->
-<section class="page-section" id="services">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted"></h3>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="my-3">Bug Bounty & Vulnerability Research</h4>
-                <p class="text-muted">Identifying and reporting security flaws in web applications, APIs, and cloud services.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="my-3">Web Security</h4>
-                <p class="text-muted">Expertise in penetration testing, OSINT, and red teaming operations.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-chalkboard-teacher fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="my-3">Cybersecurity Courses</h4>
-                <p class="text-muted">Hands-on training in bug bounty, web security, OSINT, and ethical hacking.</p>
-                <a href="#courses" class="btn btn-primary">View Courses</a>
-            </div>
-        </div>
-    </div>
-</section>
+    <main class="hero">
+      <section class="card">
+        <h2 style="margin:0 0 6px 0">What We Offer</h2>
+        <p class="muted">High-quality services for creators, pros, and learners — delivered securely and affordably.</p>
 
-<!-- Courses Section -->
-<section class="page-section" id="courses">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Courses & Training</h2>
-            <h3 class="section-subheading text-muted">Master the art of cybersecurity with my hands-on courses.</h3>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="course-item">
-                    <img class="img-fluid course-img" src="assets/img/courses/bug-bounty.jpg" alt="Bug Bounty Course" />
-                    <div class="course-caption">
-                        <h4>Bug Bounty Hunting</h4>
-                        <p class="text-muted">Learn how to find vulnerabilities and earn rewards through bug bounty programs.</p>
-                        <a href="https://www.instagram.com/ciphershade488/" target="_blank" class="btn btn-primary">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="course-item">
-                    <img class="img-fluid course-img" src="assets/img/courses/web-security.jpg" alt="Web Security Course" />
-                    <div class="course-caption">
-                        <h4>Web Security & Pentesting</h4>
-                        <p class="text-muted">Master penetration testing techniques to secure web applications.</p>
-                        <a href="https://www.instagram.com/ciphershade488/" target="_blank" class="btn btn-primary">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="course-item">
-                    <img class="img-fluid course-img" src="assets/img/courses/osint.jpg" alt="OSINT Course" />
-                    <div class="course-caption">
-                        <h4>OSINT & Reconnaissance</h4>
-                        <p class="text-muted">Discover how to gather intelligence and perform reconnaissance for ethical hacking.</p>
-                        <a href="https://www.instagram.com/ciphershade488/" target="_blank" class="btn btn-primary">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        <div class="services">
+          <div class="service-item">
+            <h3>🎬 OTT & Streaming</h3>
+            <div class="muted">Amazon Prime, Disney+ Hotstar, SonyLIV, Zee5, AltBalaji, Hoichoi, YouTube Premium</div>
+          </div>
 
-<!-- Shop Section -->
-<section class="page-section" id="shop">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Cybersecurity Vouchers</h2>
-            <h3 class="section-subheading text-muted">Get certified with official exam vouchers at the best prices.</h3>
+          <div class="service-item">
+            <h3>🎧 Music & Audio</h3>
+            <div class="muted">Spotify Premium & custom audio/jingle production</div>
+          </div>
+
+          <div class="service-item">
+            <h3>🎓 Learning & Productivity</h3>
+            <div class="muted">ChatGPT Plus, Perplexity AI Pro, LinkedIn Learning, Grammarly, Canva Pro, AI course bundles</div>
+          </div>
+
+          <div class="service-item">
+            <h3>📈 Finance & Market Tools</h3>
+            <div class="muted">TradingView Premium</div>
+          </div>
+
+          <div class="service-item">
+            <h3>🔒 VPN & Security</h3>
+            <div class="muted">ExpressVPN, NordVPN, Surfshark</div>
+          </div>
+
+          <div class="service-item">
+            <h3>💻 Software & Keys</h3>
+            <div class="muted">Microsoft 365, Windows keys, productivity software</div>
+          </div>
+
+          <div class="service-item">
+            <h3>🛡️ Cybersecurity Vouchers</h3>
+            <div class="muted">CEH · CHFI · CISM · CISA · CCNA · CCNP · CPENT · TryHackMe & more</div>
+          </div>
+
+          <div class="service-item">
+            <h3>🧪 Web Testing</h3>
+            <div class="muted">Bug bounty testing, penetration testing, vulnerability assessment with professional reports</div>
+          </div>
+
+          <div class="service-item">
+            <h3>✨ Extra Services</h3>
+            <div class="muted">Movie tickets at offer price · Custom packages for creators</div>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="shop-item">
-                    <img class="img-fluid shop-img" src="assets/img/shop/ceh.jpg" alt="CEH Voucher" />
-                    <div class="shop-caption">
-                        <h4>CEH Exam Voucher</h4>
-                        <p class="text-muted">Get your official Certified Ethical Hacker (CEH) exam voucher.</p>
-                        <a href="https://www.instagram.com/ciphershade488/" target="_blank" class="btn btn-success">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="shop-item">
-                    <img class="img-fluid shop-img" src="assets/img/shop/ccna.jpg" alt="CCNA Voucher" />
-                    <div class="shop-caption">
-                        <h4>CCNA Exam Voucher</h4>
-                        <p class="text-muted">Prepare for Cisco Certified Network Associate (CCNA) certification.</p>
-                        <a href="https://www.instagram.com/ciphershade488/" target="_blank" class="btn btn-success">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="shop-item">
-                    <img class="img-fluid shop-img" src="assets/img/shop/soc.jpg" alt="SOC Voucher" />
-                    <div class="shop-caption">
-                        <h4>SOC Analyst Exam Voucher</h4>
-                        <p class="text-muted">Get certified as a Security Operations Center (SOC) Analyst.</p>
-                        <a href="https://www.instagram.com/ciphershade488/" target="_blank" class="btn btn-success">Buy Now</a>
-                    </div>
-                </div>
-            </div>
+
+        <div class="cta">
+          <button class="btn btn-primary" onclick="location.href='#contact'">Order / Contact</button>
+          <button class="btn btn-ghost" onclick="location.href='#packages'">See Packages</button>
         </div>
-    </div>
-</section>
 
-<style>
-.course-img, .shop-img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
-    border-radius: 10px;
-}
-</style>
+        <div style="margin-top:12px" class="small">Tip: Want a bundle? Tell us your use-case (e.g., "YouTube channel starter bundle") for a tailored price.</div>
+      </section>
 
-<!-- Tools & Skills Section -->
-<section class="page-section bg-light" id="tools"> <!-- Fixed ID -->
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Tools & Skills</h2>
-            <h3 class="section-subheading text-muted">A deep dive into my cybersecurity toolkit.</h3>
+      <aside style="min-width:200px" class="card">
+        <h3 style="margin:0 0 8px 0">Quick Packages</h3>
+        <div class="grid-list">
+          <div class="service-item">
+            <h4 class="service-check">Starter Website</h4>
+            <div class="muted">Landing page, contact form, fast deploy</div>
+          </div>
+          <div class="service-item">
+            <h4 class="service-check">Creator Pack</h4>
+            <div class="muted">Video editing (up to 10min), thumbnail, jingle</div>
+          </div>
+          <div class="service-item">
+            <h4 class="service-check">Learning Pack</h4>
+            <div class="muted">ChatGPT+Canva Pro + Course bundle</div>
+          </div>
+          <div class="service-item">
+            <h4 class="service-check">Security Pack</h4>
+            <div class="muted">Cert vouchers + TryHackMe credits</div>
+          </div>
+          <div class="service-item">
+            <h4 class="service-check">Web Testing Pack</h4>
+            <div class="muted">Pen-testing + vulnerability report</div>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="assets/img/tools/1.jpg" alt="Burp Suite" />
-                    <h4>Penetration Testing</h4>
-                    <p class="text-muted">Burp Suite, Nmap, Metasploit, SQLmap</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="assets/img/tools/2.jpg" alt="Bug Bounty Platforms" />
-                    <h4>Bug Bounty Hunting</h4>
-                    <p class="text-muted">HackerOne, Bugcrowd, Synack, OpenBugBounty</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="assets/img/tools/5.jpg" alt="API Security" />
-                    <h4>API Security</h4>
-                    <p class="text-muted">JWT, GraphQL, REST, Webhooks Exploitation</p>
-                </div>
-            </div>
+
+        <div class="contact">
+          <h4 style="margin:10px 0 6px 0">Contact</h4>
+          <div class="muted">Telegram: <strong>@Ciphershade488</strong></div>
+          <div class="muted">Instagram: <strong>@hiphopking_488</strong></div>
+          <div class="muted">YouTube: <strong>@youngwaves21</strong></div>
+          <div style="margin-top:8px"><a href="#contact" class="btn btn-primary" style="text-decoration:none;display:inline-block">Get Quote</a></div>
         </div>
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <p class="large text-muted">My expertise extends across various cybersecurity domains, ensuring robust security for businesses and individuals.</p>
-            </div>
+      </aside>
+    </main>
+
+    <section id="packages" class="card" style="margin-top:18px">
+      <h3 style="margin:0 0 8px 0">Detailed Services & Examples</h3>
+      <div class="muted">Each service can be customized — below are common options. Reply with which service and use-case and we will give you a tailored quote.</div>
+
+      <div style="margin-top:14px" class="grid-list">
+        <div class="service-item">
+          <h4>Website Design</h4>
+          <div class="muted">Responsive design, contact form, CMS or static build, deployment to GitHub Pages or custom host.</div>
         </div>
-    </div>
-</section>
-
-
-        
-<!-- Contact -->
-<section class="page-section bg-dark text-white" id="contact">
-    <div class="container text-center">
-        <h2 class="section-heading text-uppercase">Get in Touch</h2>
-    </div>
-</section>
-
-
-<!-- Footer-->
-<footer class="footer py-4">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4 text-lg-start">Copyright &copy; Ciphershade 2024</div>
-            <div class="col-lg-4 my-3 my-lg-0">
-                <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ciphershade488/" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a class="btn btn-dark btn-social mx-2" href="https://t.me/Ciphershade488" target="_blank" aria-label="Telegram">
-                    <i class="fab fa-telegram-plane"></i>
-                </a>
-                <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/gaurav-shukla-ciphershade-%E2%9C%A8-ab9b892b4/" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-            <div class="col-lg-4 text-lg-end">
-                <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-            </div>
+        <div class="service-item">
+          <h4>Video Editing</h4>
+          <div class="muted">Cutting, color-grade, transitions, subtitles, intro jingle (commercial quality).</div>
         </div>
-    </div>
-</footer>
+        <div class="service-item">
+          <h4>Jingles & Audio</h4>
+          <div class="muted">Custom 10–30s jingle, mixing, master deliverables in MP3/WAV.</div>
+        </div>
+        <div class="service-item">
+          <h4>Accounts & Tools</h4>
+          <div class="muted">Streaming/music/productivity account provisioning and guidance (licenses/keys handled securely).</div>
+        </div>
+        <div class="service-item">
+          <h4>Web Testing</h4>
+          <div class="muted">Full vulnerability scanning, manual testing, exploitation proof-of-concept, detailed report, and mitigation advice.</div>
+        </div>
+      </div>
+    </section>
 
-        
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    <section id="contact" class="card" style="margin-top:18px">
+      <h3 style="margin:0 0 8px 0">Get In Touch</h3>
+      <p class="muted">Tell us briefly what you need and your budget. Example: "Website for my rap duo — 3 pages, contact form, YouTube embed. Budget: ₹5,000"</p>
+
+      <form onsubmit="event.preventDefault();alert('Thanks! Message captured — copy the example and send via Telegram or Instagram.');" style="margin-top:10px">
+        <div style="display:flex;gap:8px;flex-direction:column">
+          <input placeholder="Your name or handle" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+          <input placeholder="Service you want (e.g., Website, Video, Web Testing)" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+          <textarea placeholder="Short description + budget" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+          <div style="display:flex;gap:8px"><button class="btn btn-primary">Send (opens a modal)</button><button class="btn btn-ghost" type="reset">Clear</button></div>
+        </div>
+      </form>
+
+      <div style="margin-top:8px" class="small">Or message directly on Telegram/Instagram (links provided above). We usually reply within a few hours.</div>
+    </section>
+
+    <footer>
+      <div>© CipherShade — Crafted with care. Not affiliated with service brands listed above.</div>
+      <div style="margin-top:6px" class="small">To publish: replace your current index.html with this file in the repository root and push to GitHub. If you want, I can adapt this to a multi-page site or add real links/buttons next.</div>
+    </footer>
+  </div>
+</body>
 </html>
