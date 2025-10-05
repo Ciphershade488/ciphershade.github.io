@@ -1,10 +1,7 @@
 @charset "UTF-8";
 /*!
  * Ciphershade488 Custom Cyber Theme CSS
- * Base: Start Bootstrap - Agency v7.0.12
- * Theme: Dark Mode / Electric Yellow (Chartreuse) Glow (3D Effect)
- * Primary Color: #B0FC38 (Electric Yellow/Chartreuse)
- * Secondary Color: #FF00FF (Magenta/Bright Blue - used for icons)
+ * Final Version: High Contrast Dark Mode / Electric Yellow (Chartreuse) Glow (3D Effect)
  */
 
 :root {
@@ -18,7 +15,7 @@
     --cs-shadow-color: 176, 252, 56; /* RGB for --cs-primary */
     --cs-shadow: 0 0 20px rgba(var(--cs-shadow-color), 0.8), 0 0 10px rgba(var(--cs-shadow-color), 0.5);
     
-    /* Bootstrap Overrides */
+    /* Bootstrap Overrides for consistency */
     --bs-primary: var(--cs-primary);
     --bs-primary-rgb: var(--cs-shadow-color);
     --bs-dark: var(--cs-dark);
@@ -26,7 +23,7 @@
     --bs-body-color: #e0e0e0;
     --bs-body-bg: var(--cs-dark);
     --bs-link-color: var(--cs-primary);
-    --bs-link-hover-color: #92e01a; /* Darker shade of neon for hover */
+    --bs-link-hover-color: #92e01a; 
     --bs-body-font-family: 'Montserrat', sans-serif;
     --bs-body-font-weight: 400;
 
@@ -40,16 +37,16 @@
 body {
     margin: 0;
     font-family: var(--bs-body-font-family);
-    line-height: 1.6; /* Improved readability on dark mode */
+    line-height: 1.6; 
     color: var(--bs-body-color);
     background-color: var(--cs-dark);
+    background-attachment: fixed;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     line-height: 1.2;
-    color: #FFFFFF; /* Default to white for professional visibility */
+    color: #FFFFFF;
 }
 
 /* Section Headings - Use the Neon Glow */
@@ -57,10 +54,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 .page-section .section-heading.h2 {
     font-size: 2.5rem;
     margin-top: 0;
-    margin-bottom: 1rem;
-    color: var(--cs-primary); /* Electric Yellow Heading */
-    text-shadow: 0 0 8px rgba(var(--cs-shadow-color), 0.7); /* Neon Glow */
-    font-family: 'Roboto Mono', monospace; /* Futuristic/Cyber font for headings */
+    margin-bottom: 1.5rem; /* Increased spacing below heading */
+    color: var(--cs-primary);
+    text-shadow: 0 0 8px rgba(var(--cs-shadow-color), 0.7);
+    font-family: 'Roboto Mono', monospace; 
 }
 .page-section h3.section-subheading, 
 .page-section .section-subheading.h3 {
@@ -68,8 +65,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     font-weight: 400;
     font-style: italic;
     font-family: "Roboto Slab", serif;
-    margin-bottom: 4rem;
-    color: #a0a0a0; /* Muted gray for body text contrast */
+    margin-bottom: 5rem; /* FIX: Increased spacing to separate from cards */
+    color: #a0a0a0 !important;
+    line-height: 1.5;
 }
 
 /* --- NAVIGATION --- */
@@ -77,32 +75,23 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 #mainNav {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: rgba(10, 10, 10, 0.95); /* Semi-transparent black */
+    background-color: rgba(10, 10, 10, 0.95) !important;
     border-bottom: 2px solid var(--cs-primary);
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
 }
-/* TARGETED CHANGE: NAVBAR BRAND (HIGH CONTRAST) */
-#mainNav .navbar-brand {
-    color: #FFFFFF; /* Ensure brand name is WHITE for contrast */
-    text-shadow: 0 0 8px var(--cs-primary); /* Apply strong glow */
+.navbar-brand {
+    color: #FFFFFF !important; 
+    text-shadow: 0 0 8px var(--cs-primary);
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
     font-size: 1.5rem;
 }
-#mainNav .navbar-nav .nav-item .nav-link {
-    color: #fff;
-    font-size: 1rem;
-    transition: color 0.3s;
+.nav-link {
+    color: #e0e0e0 !important;
 }
-#mainNav .navbar-nav .nav-item .nav-link.active, 
-#mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: var(--cs-primary); /* Hover uses Electric Yellow */
-    text-shadow: 0 0 3px var(--cs-primary);
-}
-@media (min-width: 992px) {
-    #mainNav.navbar-shrink {
-        background-color: var(--cs-dark);
-    }
+.nav-link:hover {
+    color: var(--cs-primary) !important;
+    text-shadow: 0 0 5px var(--cs-primary);
 }
 
 /* --- MASTHEAD --- */
@@ -111,28 +100,18 @@ header.masthead {
     padding-top: 12rem;
     padding-bottom: 8rem;
     background-color: var(--cs-dark);
-    /* Assuming a dark, subtle cyber background image */
-    background-image: url("assets/header-bg.jpg"); 
-    background-size: cover;
-    background-position: center;
 }
 header.masthead .masthead-subheading {
-    color: var(--cs-secondary); /* Magenta/Blue for secondary accent */
-    font-family: "Roboto Mono", monospace;
+    color: var(--cs-secondary);
+    font-family: 'Roboto Mono', monospace; 
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 header.masthead .masthead-heading {
     color: #ffffff;
-    text-shadow: var(--cs-shadow); /* Strong Neon Glow */
+    text-shadow: var(--cs-shadow);
     font-size: 3.5rem;
     line-height: 1.1;
-}
-@media (min-width: 768px) {
-    header.masthead .masthead-heading {
-        font-size: 4.5rem;
-        line-height: 4.5rem;
-    }
 }
 
 /* --- BUTTONS --- */
@@ -140,7 +119,7 @@ header.masthead .masthead-heading {
 .btn-primary, .btn-success {
     background-color: var(--cs-primary);
     border-color: var(--cs-primary);
-    color: var(--cs-dark) !important; /* Dark text on bright button for max visibility */
+    color: var(--cs-dark) !important; 
     font-weight: 700;
     text-shadow: none;
 }
@@ -166,33 +145,33 @@ header.masthead .masthead-heading {
     box-shadow: 0 0 15px rgba(37, 211, 102, 0.8);
 }
 
-/* --- CARD SERVICES & VOUCHERS (3D LOOK) --- */
+/* --- CARDS (3D Look) --- */
 
 .service-card, .voucher-card {
-    background-color: var(--cs-card-bg);
-    border: var(--cs-card-border);
+    background-color: #1a1a1a;
+    border: 1px solid rgba(176, 252, 56, 0.3); 
     border-radius: 10px;
     padding: 2rem;
     margin-bottom: 1.5rem;
     height: 100%;
     transition: all 0.4s ease-in-out;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); /* Depth effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); 
     text-align: center;
 }
 .service-card:hover, .voucher-card:hover {
     background-color: #222222; 
-    box-shadow: var(--cs-shadow); /* Stronger Neon Glow on hover */
-    transform: translateY(-5px); /* Lift effect */
+    box-shadow: var(--cs-shadow); 
+    transform: translateY(-5px); 
 }
 .card-title {
-    color: #FFFFFF; /* IMPORTANT: Keep titles white for readability */
+    color: #FFFFFF;
     font-size: 1.6rem; 
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; 
     font-weight: 700;
 }
 .service-icon {
     font-size: 3rem;
-    color: var(--cs-secondary); /* Magenta/Blue for visual distinction from primary glow */
+    color: var(--cs-secondary); 
     text-shadow: 0 0 8px var(--cs-secondary);
     margin-bottom: 1rem;
 }
@@ -206,29 +185,24 @@ header.masthead .masthead-heading {
     border-radius: 5px;
     font-size: 0.8rem;
     color: #555;
-    background-color: #111; /* Slightly darker internal slot */
+    background-color: #111;
 }
 .list-group-item {
     background-color: transparent !important;
     color: #e0e0e0;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important; /* Dotted separator */
-    padding: 0.5rem 0 !important;
-    font-size: 0.9rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important; 
+    padding: 0.75rem 0 !important; /* Proper vertical spacing for list items */
+    text-align: left;
+    line-height: 1.2;
 }
 .list-group-item:last-child {
     border-bottom: none !important;
 }
 .list-group-item i {
-    color: var(--cs-primary); /* Electric Yellow checkmarks */
+    color: var(--cs-primary); 
 }
 .list-col {
     padding: 0 10px;
-}
-
-/* --- WEB & MEDIA SERVICES (Simplified cards) --- */
-#web-media .service-card p.small {
-    color: #b0b0b0 !important;
-    margin-top: 0.5rem;
 }
 
 /* --- FOOTER --- */
@@ -248,7 +222,7 @@ header.masthead .masthead-heading {
     color: var(--cs-primary) !important;
 }
 
-/* --- REMAINING LEGACY STYLES (Adjusted for dark theme) --- */
+/* --- UTILITY CLASSES --- */
 
 .text-muted {
     color: #a0a0a0 !important;
@@ -258,4 +232,7 @@ header.masthead .masthead-heading {
 }
 .bg-dark {
     background-color: var(--cs-dark) !important;
+}
+.page-section {
+    background-color: var(--cs-section-bg);
 }
