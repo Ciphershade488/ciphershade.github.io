@@ -1,235 +1,380 @@
-this is the previous code <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Ciphershade - Digital & Cybersecurity Services </title>
-        <!-- Favicon-->
+        <meta name="description" content="Ciphershade488 - Digital & Cybersecurity Services: Premium OTT, VPN, Productivity Tools, Software, and Certification Vouchers." />
+        <meta name="author" content="CipherShade" />
+        <title>Ciphershade488 - Digital & Cybersecurity Services</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <style>
+            :root {
+                --cs-dark: #0a0a0a; /* Ultra Deep Background */
+                --cs-section-bg: #0f0f0f; /* Slightly Lighter Section Background */
+                --cs-primary: #B0FC38; /* Electric Chartreuse/Yellow for accents */
+                --cs-secondary: #ff00ff; /* Magenta/Bright Blue for icons */
+                /* Refined shadow - less glow, more crisp 3D effect */
+                --cs-shadow-card: 0 8px 15px rgba(0, 0, 0, 0.8), 0 0 5px rgba(176, 252, 56, 0.3); /* Deeper shadow, subtle highlight */
+                --cs-shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.9), 0 0 8px rgba(176, 252, 56, 0.6); /* More pronounced on hover */
+                --cs-text-shadow-heading: 0 0 5px rgba(176, 252, 56, 0.5); /* Subtle text shadow */
+                --cs-text-shadow-navbar: 0 0 3px rgba(176, 252, 56, 0.7); /* Navbar brand text shadow */
+            }
+
+            body {
+                background-color: var(--cs-dark);
+                color: #e0e0e0;
+                font-family: 'Montserrat', sans-serif; 
+                background-attachment: fixed;
+            }
+
+            /* Navigation */
+            #mainNav {
+                background-color: rgba(10, 10, 10, 0.95) !important;
+                border-bottom: 2px solid var(--cs-primary);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            }
+            .navbar-brand {
+                color: #FFFFFF !important; 
+                text-shadow: var(--cs-text-shadow-navbar); 
+                font-family: 'Roboto Mono', monospace; 
+                font-size: 1.5rem;
+            }
+            .nav-link {
+                color: #e0e0e0 !important;
+            }
+            .nav-link:hover {
+                color: var(--cs-primary) !important;
+                text-shadow: var(--cs-text-shadow-heading);
+            }
+
+            /* Masthead */
+            .masthead {
+                padding: 12rem 0 8rem;
+                background-color: var(--cs-dark);
+            }
+            .masthead-subheading {
+                color: var(--cs-secondary);
+                font-size: 1.2rem;
+                font-family: 'Roboto Mono', monospace; 
+            }
+            .masthead-heading {
+                color: #ffffff;
+                text-shadow: var(--cs-text-shadow-heading); /* Subtle shadow for headings */
+            }
+
+            /* Section Styling */
+            .page-section {
+                padding: 6rem 0;
+                background-color: var(--cs-section-bg);
+            }
+            .section-heading {
+                color: var(--cs-primary);
+                text-shadow: var(--cs-text-shadow-heading); 
+                font-family: 'Roboto Mono', monospace; 
+            }
+            .section-subheading {
+                color: #a0a0a0 !important;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            /* Cards and Items - Refined 3D Highlight (Less Glow) */
+            .service-card, .voucher-card {
+                background-color: #1a1a1a;
+                border: 1px solid rgba(176, 252, 56, 0.2); /* Softer border */
+                border-radius: 10px;
+                padding: 2rem;
+                margin-bottom: 1.5rem;
+                height: 100%;
+                transition: all 0.4s ease-in-out;
+                box-shadow: var(--cs-shadow-card); /* Less glow, more depth */
+                text-align: center;
+            }
+            .service-card:hover, .voucher-card:hover {
+                background-color: #222222; 
+                box-shadow: var(--cs-shadow-hover); /* More pronounced hover, but still controlled */
+                transform: translateY(-5px); 
+            }
+            .service-icon {
+                font-size: 3rem;
+                color: var(--cs-secondary);
+                text-shadow: 0 0 5px var(--cs-secondary); /* Less intense glow for icons */
+                margin-bottom: 1rem;
+            }
+            .card-title {
+                color: #FFFFFF; 
+                font-size: 1.6rem; 
+                margin-bottom: 1rem;
+                text-shadow: 0 0 2px rgba(0, 0, 0, 0.4); /* Subtle text shadow for definition */
+            }
+
+            /* Specific List Styling */
+            .list-group-item {
+                background-color: transparent !important;
+                color: #e0e0e0;
+                border: none;
+                padding: 0.5rem 0;
+                font-size: 0.9rem;
+            }
+            .list-group-item i {
+                color: var(--cs-primary); 
+            }
+            
+            /* Buttons */
+            .btn-primary, .btn-success {
+                background-color: var(--cs-primary);
+                border-color: var(--cs-primary);
+                color: var(--cs-dark) !important;
+                font-weight: bold;
+                transition: all 0.3s ease-in-out;
+            }
+            .btn-primary:hover, .btn-success:hover {
+                background-color: #92e022; /* Slightly darker yellow on hover */
+                border-color: #92e022;
+                box-shadow: 0 0 10px rgba(176, 252, 56, 0.7); /* Subtle button glow */
+            }
+
+            .btn-whatsapp {
+                background-color: #25d366; 
+                border-color: #25d366;
+                color: #ffffff !important;
+                font-weight: bold;
+            }
+            .btn-whatsapp:hover {
+                background-color: #128c7e;
+                border-color: #128c7e;
+                box-shadow: 0 0 10px rgba(37, 211, 102, 0.6);
+            }
+            
+            /* Image Slots - For your images */
+            .img-slot {
+                height: 80px; /* Standard height for logos */
+                margin-bottom: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden; /* Ensure images fit */
+            }
+            /* Add this if you want a border around the image slot itself */
+            .img-slot img {
+                max-height: 100%;
+                width: auto;
+                max-width: 100%; /* Ensure images don't overflow */
+                object-fit: contain; /* Maintain aspect ratio */
+                filter: brightness(1.2); /* Slightly brighten logos if needed on dark bg */
+            }
+
+
+            /* Footer */
+            .footer {
+                background-color: #0d0d0d;
+                border-top: 1px solid rgba(176, 252, 56, 0.1); 
+            }
+        </style>
     </head>
     <body id="page-top">
         
-<!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand text-uppercase fw-bold" href="#home">CipherShade</a>
+        <a class="navbar-brand text-uppercase fw-bold" href="#page-top">CipherShade488_</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#courses">Web & Media</a></li>
-                <li class="nav-item"><a class="nav-link" href="#shop">Vouchers</a></li>
-                <li class="nav-item"><a class="nav-link" href="#tools">Shop Section</a></li> <!-- Fixed ID -->
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#digital-services">Digital Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#web-media">Web & Media</a></li>
+                <li class="nav-item"><a class="nav-link" href="#vouchers">Vouchers</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-        <!-- Masthead-->
         <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">Welcome to CipherShade!</div>
-                <div class="masthead-heading text-uppercase">Your One-Stop Digital & Cybersecurity Services</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Explore Services</a>
+            <div class="container text-center">
+                <div class="masthead-subheading">ACCESS GRANTED</div>
+                <div class="masthead-heading text-uppercase">Your One-Stop Digital & Cybersecurity Hub</div>
+                <a class="btn btn-primary btn-xl text-uppercase mt-4" href="#digital-services">Explore Services</a>
             </div>
         </header>
-        <!-- Services-->
-<section class="page-section" id="services">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted"></h3>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="my-3">Bug Bounty & Vulnerability Research</h4>
-                <p class="text-muted">Identifying and reporting security flaws in web applications, APIs, and cloud services.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="my-3">Web Security</h4>
-                <p class="text-muted">Expertise in penetration testing, OSINT, and red teaming operations.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-chalkboard-teacher fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="my-3">Cybersecurity Courses</h4>
-                <p class="text-muted">Hands-on training in bug bounty, web security, OSINT, and ethical hacking.</p>
-                <a href="#courses" class="btn btn-primary">View Courses</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Courses Section -->
-<section class="page-section" id="courses">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Courses & Training</h2>
-            <h3 class="section-subheading text-muted">Master the art of cybersecurity with my hands-on courses.</h3>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="course-item">
-                    <img class="img-fluid course-img" src="assets/img/courses/bug-bounty.jpg" alt="Bug Bounty Course" />
-                    <div class="course-caption">
-                        <h4>Bug Bounty Hunting</h4>
-                        <p class="text-muted">Learn how to find vulnerabilities and earn rewards through bug bounty programs.</p>
-                        <a href="https://www.instagram.com/ciphershade488/" target="_blank" class="btn btn-primary">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="course-item">
-                    <img class="img-fluid course-img" src="assets/img/courses/web-security.jpg" alt="Web Security Course" />
-                    <div class="course-caption">
-                        <h4>Web Security & Pentesting</h4>
-                        <p class="text-muted">Master penetration testing techniques to secure web applications.</p>
-                        <a href="https://www.instagram.com/ciphershade488/" target="_blank" class="btn btn-primary">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="course-item">
-                    <img class="img-fluid course-img" src="assets/img/courses/osint.jpg" alt="OSINT Course" />
-                    <div class="course-caption">
-                        <h4>OSINT & Reconnaissance</h4>
-                        <p class="text-muted">Discover how to gather intelligence and perform reconnaissance for ethical hacking.</p>
-                        <a href="https://www.instagram.com/ciphershade488/" target="_blank" class="btn btn-primary">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Shop Section -->
-<section class="page-section" id="shop">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Cybersecurity Vouchers</h2>
-            <h3 class="section-subheading text-muted">Get certified with official exam vouchers at the best prices.</h3>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="shop-item">
-                    <img class="img-fluid shop-img" src="assets/img/shop/ceh.jpg" alt="CEH Voucher" />
-                    <div class="shop-caption">
-                        <h4>CEH Exam Voucher</h4>
-                        <p class="text-muted">Get your official Certified Ethical Hacker (CEH) exam voucher.</p>
-                        <a href="https://www.instagram.com/ciphershade488/" target="_blank" class="btn btn-success">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="shop-item">
-                    <img class="img-fluid shop-img" src="assets/img/shop/ccna.jpg" alt="CCNA Voucher" />
-                    <div class="shop-caption">
-                        <h4>CCNA Exam Voucher</h4>
-                        <p class="text-muted">Prepare for Cisco Certified Network Associate (CCNA) certification.</p>
-                        <a href="https://www.instagram.com/ciphershade488/" target="_blank" class="btn btn-success">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="shop-item">
-                    <img class="img-fluid shop-img" src="assets/img/shop/soc.jpg" alt="SOC Voucher" />
-                    <div class="shop-caption">
-                        <h4>SOC Analyst Exam Voucher</h4>
-                        <p class="text-muted">Get certified as a Security Operations Center (SOC) Analyst.</p>
-                        <a href="https://www.instagram.com/ciphershade488/" target="_blank" class="btn btn-success">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-.course-img, .shop-img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
-    border-radius: 10px;
-}
-</style>
-
-<!-- Tools & Skills Section -->
-<section class="page-section bg-light" id="tools"> <!-- Fixed ID -->
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Tools & Skills</h2>
-            <h3 class="section-subheading text-muted">A deep dive into my cybersecurity toolkit.</h3>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="assets/img/tools/1.jpg" alt="Burp Suite" />
-                    <h4>Penetration Testing</h4>
-                    <p class="text-muted">Burp Suite, Nmap, Metasploit, SQLmap</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="assets/img/tools/2.jpg" alt="Bug Bounty Platforms" />
-                    <h4>Bug Bounty Hunting</h4>
-                    <p class="text-muted">HackerOne, Bugcrowd, Synack, OpenBugBounty</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="assets/img/tools/5.jpg" alt="API Security" />
-                    <h4>API Security</h4>
-                    <p class="text-muted">JWT, GraphQL, REST, Webhooks Exploitation</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <p class="large text-muted">My expertise extends across various cybersecurity domains, ensuring robust security for businesses and individuals.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
         
-<!-- Contact -->
+        <section class="page-section" id="digital-services">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Premium Digital Products // Accounts & Keys</h2>
+            <h3 class="section-subheading text-muted">Get premium access to tools, streaming, and software at highly discounted prices.</h3>
+        </div>
+        <div class="row justify-content-center">
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="img-slot">
+                        <img src="assets/streaming-logos.png" alt="OTT & Streaming Logos" />
+                    </div>
+                    <h4 class="card-title">🎬 OTT & Streaming</h4>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item"><i class="fas fa-check me-2"></i>Amazon Prime Video</li>
+                        <li class="list-group-item"><i class="fas fa-check me-2"></i>Disney+ Hotstar, SonyLIV, Zee5</li>
+                        <li class="list-group-item"><i class="fas fa-check me-2"></i>AltBalaji, Hoichoi</li>
+                        <li class="list-group-item"><i class="fas fa-check me-2"></i>YouTube Premium</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="img-slot">
+                        <img src="assets/productivity-logos.png" alt="Learning & Productivity Logos" />
+                    </div>
+                    <h4 class="card-title">🎓 Learning & Productivity</h4>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item"><i class="fas fa-check me-2"></i>ChatGPT Plus, Perplexity AI Pro</li>
+                        <li class="list-group-item"><i class="fas fa-check me-2"></i>LinkedIn Learning, Grammarly Premium</li>
+                        <li class="list-group-item"><i class="fas fa-check me-2"></i>Canva Pro, AI Course Bundles</li>
+                        <li class="list-group-item"><i class="fas fa-check me-2"></i>Spotify Premium, TradingView Premium</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="img-slot">
+                        <img src="assets/software-security-logos.png" alt="VPN, Software & Keys Logos" />
+                    </div>
+                    <h4 class="card-title">🌐 VPN, Software & Keys</h4>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item"><i class="fas fa-check me-2"></i>ExpressVPN, NordVPN, Surfshark VPN</li>
+                        <li class="list-group-item"><i class="fas fa-check me-2"></i>Microsoft 365 (Office)</li>
+                        <li class="list-group-item"><i class="fas fa-check me-2"></i>Windows keys</li>
+                        <li class="list-group-item"><i class="fas fa-check me-2"></i>*Other specific software/tools available*</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+---
+
+<section class="page-section" id="web-media">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Web & Media Services // Creative & Testing</h2>
+            <h3 class="section-subheading text-muted">Professional services to build and promote your digital presence.</h3>
+        </div>
+        <div class="row text-center justify-content-center">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-card">
+                    <i class="fas fa-paint-brush service-icon"></i>
+                    <h4 class="card-title">Web Design</h4>
+                    <p class="text-muted small">Modern, responsive, and SEO-friendly website creation.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-card">
+                    <i class="fas fa-bug service-icon"></i>
+                    <h4 class="card-title">Web Testing</h4>
+                    <p class="text-muted small">Comprehensive security and performance audits for web apps.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-card">
+                    <i class="fas fa-video service-icon"></i>
+                    <h4 class="card-title">Video Production</h4>
+                    <p class="text-muted small">Professional video shooting and editing for content or ads.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-card">
+                    <i class="fas fa-music service-icon"></i>
+                    <h4 class="card-title">Jingles for Ads</h4>
+                    <p class="text-muted small">Custom audio jingles and music for effective brand promotion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+---
+
+<section class="page-section" id="vouchers">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Cybersecurity Exam Vouchers // Certifications</h2>
+            <h3 class="section-subheading text-muted">The best prices for official, globally recognized certification exams.</h3>
+        </div>
+        <div class="row justify-content-center">
+            
+            <div class="col-lg-10">
+                <div class="voucher-card">
+                    <h4 class="card-title mb-4">Available Vouchers List</h4>
+                    <div class="row small text-start">
+                        <div class="col-md-4 list-col">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-lock me-2"></i>CRTP</li>
+                                <li class="list-group-item"><i class="fas fa-lock me-2"></i>CEH THEORY</li>
+                                <li class="list-group-item"><i class="fas fa-lock me-2"></i>BSCP</li>
+                                <li class="list-group-item"><i class="fas fa-lock me-2"></i>Chfi</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 list-col">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-lock me-2"></i>Ecih</li>
+                                <li class="list-group-item"><i class="fas fa-lock me-2"></i>Ctia</li>
+                                <li class="list-group-item"><i class="fas fa-lock me-2"></i>CCNA</li>
+                                <li class="list-group-item"><i class="fas fa-lock me-2"></i>Ccnp</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 list-col">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-lock me-2"></i>CISA / CISM</li>
+                                <li class="list-group-item"><i class="fas fa-lock me-2"></i>Cpent</li>
+                                <li class="list-group-item"><i class="fas fa-lock me-2"></i>TRYHACKME Subs</li>
+                                <li class="list-group-item"><i class="fas fa-lock me-2"></i>*Many others available on request*</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-5 text-center">
+                <h4 class="text-white">Extra Service: Movie Tickets at Offer Price!</h4>
+                <a href="https://chat.whatsapp.com/FoIMiv1AH2e6XkxMqXC7LY" target="_blank" class="btn btn-whatsapp btn-xl mt-3">
+                    <i class="fab fa-whatsapp me-2"></i> Join WhatsApp Group for Updates
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+---
+        
 <section class="page-section bg-dark text-white" id="contact">
     <div class="container text-center">
-        <h2 class="section-heading text-uppercase">Get in Touch</h2>
+        <h2 class="section-heading text-uppercase">Contact // Initiate_Secure_Connection</h2>
+        <p class="text-light mb-5">Reach out via Instagram, Telegram, or LinkedIn for inquiries, purchases, or support.</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <a class="btn btn-primary mx-2 mb-2" href="https://www.instagram.com/ciphershade488/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a class="btn btn-primary mx-2 mb-2" href="https://t.me/Ciphershade488" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                <a class="btn btn-primary mx-2 mb-2" href="https://www.linkedin.com/in/gaurav-shukla-ciphershade-%E2%9C%A8-ab9b892b4/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            </div>
+        </div>
     </div>
 </section>
 
 
-<!-- Footer-->
 <footer class="footer py-4">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-4 text-lg-start">Copyright &copy; Ciphershade 2024</div>
+            <div class="col-lg-4 text-lg-start text-muted small">Copyright &copy; CipherShade488 2025</div>
             <div class="col-lg-4 my-3 my-lg-0">
                 <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ciphershade488/" target="_blank" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
@@ -250,14 +395,6 @@ this is the previous code <!DOCTYPE html>
 </footer>
 
         
-        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
