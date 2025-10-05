@@ -66,7 +66,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     font-weight: 400;
     font-style: italic;
     font-family: "Roboto Slab", serif;
-    margin-bottom: 5rem;
+    margin-bottom: 5rem; 
     color: #a0a0a0 !important;
     line-height: 1.5;
 }
@@ -192,8 +192,8 @@ header.masthead .masthead-heading {
     background-color: transparent !important;
     color: #e0e0e0;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important; 
-    /* FIX: Tighter vertical spacing for cleaner lists (from 0.75rem to 0.5rem) */
-    padding: 0.5rem 0 !important; 
+    /* FINAL FIX: Adjusted vertical padding to 0.6rem for optimal line spacing */
+    padding: 0.6rem 0 !important; 
     text-align: left;
     line-height: 1.2;
 }
@@ -207,6 +207,15 @@ header.masthead .masthead-heading {
     padding: 0 10px;
 }
 
+/* --- EXTRA SERVICE & CONTACT SPACING FIX --- */
+.extra-service-heading {
+    margin-top: 3rem; /* Space above Extra Service heading */
+    margin-bottom: 1rem; /* Space below Extra Service heading */
+}
+.contact-section-margin {
+    margin-top: 4rem; /* Space above Contact Heading/Button group */
+}
+
 /* --- FOOTER --- */
 
 .footer {
@@ -217,7 +226,7 @@ header.masthead .masthead-heading {
 .footer a.link-dark, .footer a.btn-dark {
     color: #a0a0a0 !important;
     background-color: #222 !important;
-    border-color: #333 !important;
+    border-color: #333 ! проводят !important;
     transition: color 0.3s;
 }
 .footer a.btn-dark:hover {
