@@ -1,196 +1,223 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CipherShade — Creative & Cyber Services</title>
-  <meta name="description" content="Website design, video editing, jingles, web testing, streaming accounts, software, cybersecurity vouchers and more." />
-  <style>
-    :root{--accent:#6c63ff;--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071020 0%, #071627 60%);color:#e6eef6}
-    .container{max-width:1100px;margin:36px auto;padding:20px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#5b4bff,#2bd4ff);display:flex;align-items:center;justify-content:center;font-weight:700}
-    h1{margin:0;font-size:20px}
-    p.lead{margin:6px 0;color:var(--muted)}
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:18px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);padding:18px;border-radius:12px}
-    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
-    .service-item{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);min-height:84px}
-    .service-item h3{margin:6px 0 4px 0;font-size:15px}
-    .muted{color:var(--muted);font-size:13px}
-    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
-    .btn-primary{background:var(--accent);color:#fff}
-    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#e6eef6}
-    .list{display:flex;flex-direction:column;gap:6px;margin-top:10px}
-    footer{margin-top:24px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);font-size:13px}
-    @media (max-width:880px){.hero{grid-template-columns:1fr}}
-    .badge{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600}
-    .grid-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
-    .service-check{font-weight:700}
-    .contact{margin-top:12px}
-    .small{font-size:13px;color:var(--muted)}
-  </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Ciphershade Services - OTT, Music, Productivity Tools, VPN, Software, Cybersecurity Vouchers, Web & Media Services" />
+    <meta name="author" content="Ciphershade488" />
+    <title>Ciphershade488 - Digital & Cybersecurity Services</title>
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #f9f9f9; color: #333; }
+        .masthead { padding: 8rem 0; text-align: center; background: #fff url('assets/header-bg.jpg') no-repeat center center; background-size: cover; }
+        .masthead-heading { font-size: 3rem; font-weight: 700; color: #111; }
+        .masthead-subheading { font-size: 1.5rem; margin-bottom: 1rem; color: #555; }
+        .section-heading { font-weight: 700; margin-bottom: 2rem; }
+        .section-subheading { font-weight: 300; color: #666; margin-bottom: 3rem; }
+        .service-card { border: 1px solid #e0e0e0; border-radius: 10px; padding: 2rem; margin-bottom: 2rem; transition: 0.3s; background: #fff; }
+        .service-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); transform: translateY(-5px); }
+        .service-icon { font-size: 3rem; margin-bottom: 1rem; color: #007bff; }
+        .btn-custom { background-color: #007bff; color: #fff; border-radius: 50px; padding: 0.8rem 2rem; }
+        .btn-custom:hover { background-color: #0056b3; color: #fff; }
+        footer { background: #111; color: #aaa; }
+        footer a { color: #aaa; text-decoration: none; }
+        footer a:hover { color: #fff; }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">CS</div>
-        <div>
-          <h1>CipherShade — Creative & Cyber Services</h1>
-          <p class="lead">Website design · Video editing · Music jingles · Web testing · Cybersecurity vouchers · Streaming & tools</p>
+<body id="page-top">
+
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">Ciphershade488</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#webservices">Web & Media</a></li>
+                <li class="nav-item"><a class="nav-link" href="#shop">Vouchers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </div>
-      <div class="badge">WELCOME SIR/MA'AM 😊</div>
-    </header>
+    </div>
+</nav>
 
-    <main class="hero">
-      <section class="card">
-        <h2 style="margin:0 0 6px 0">What We Offer</h2>
-        <p class="muted">High-quality services for creators, pros, and learners — delivered securely and affordably.</p>
+<!-- Masthead -->
+<header class="masthead" id="home">
+    <div class="container">
+        <div class="masthead-subheading">WELCOME SIR/MA'AM 😊</div>
+        <div class="masthead-heading text-uppercase">Your One-Stop Digital & Cybersecurity Services</div>
+        <a class="btn btn-custom btn-xl text-uppercase" href="#services">Explore Services</a>
+    </div>
+</header>
 
-        <div class="services">
-          <div class="service-item">
-            <h3>🎬 OTT & Streaming</h3>
-            <div class="muted">Amazon Prime, Disney+ Hotstar, SonyLIV, Zee5, AltBalaji, Hoichoi, YouTube Premium</div>
-          </div>
-
-          <div class="service-item">
-            <h3>🎧 Music & Audio</h3>
-            <div class="muted">Spotify Premium & custom audio/jingle production</div>
-          </div>
-
-          <div class="service-item">
-            <h3>🎓 Learning & Productivity</h3>
-            <div class="muted">ChatGPT Plus, Perplexity AI Pro, LinkedIn Learning, Grammarly, Canva Pro, AI course bundles</div>
-          </div>
-
-          <div class="service-item">
-            <h3>📈 Finance & Market Tools</h3>
-            <div class="muted">TradingView Premium</div>
-          </div>
-
-          <div class="service-item">
-            <h3>🔒 VPN & Security</h3>
-            <div class="muted">ExpressVPN, NordVPN, Surfshark</div>
-          </div>
-
-          <div class="service-item">
-            <h3>💻 Software & Keys</h3>
-            <div class="muted">Microsoft 365, Windows keys, productivity software</div>
-          </div>
-
-          <div class="service-item">
-            <h3>🛡️ Cybersecurity Vouchers</h3>
-            <div class="muted">CEH · CHFI · CISM · CISA · CCNA · CCNP · CPENT · TryHackMe & more</div>
-          </div>
-
-          <div class="service-item">
-            <h3>🧪 Web Testing</h3>
-            <div class="muted">Bug bounty testing, penetration testing, vulnerability assessment with professional reports</div>
-          </div>
-
-          <div class="service-item">
-            <h3>✨ Extra Services</h3>
-            <div class="muted">Movie tickets at offer price · Custom packages for creators</div>
-          </div>
+<!-- Services Section -->
+<section class="page-section" id="services">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Our Services</h2>
+            <h3 class="section-subheading">We provide high-quality digital and cybersecurity solutions.</h3>
         </div>
-
-        <div class="cta">
-          <button class="btn btn-primary" onclick="location.href='#contact'">Order / Contact</button>
-          <button class="btn btn-ghost" onclick="location.href='#packages'">See Packages</button>
+        <div class="row text-center">
+            <!-- OTT & Streaming -->
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-tv service-icon"></i>
+                    <h4>OTT & Streaming</h4>
+                    <p>Amazon Prime, Disney+ Hotstar, SonyLIV, Zee5, AltBalaji, Hoichoi, YouTube Premium</p>
+                </div>
+            </div>
+            <!-- Music & Audio -->
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-music service-icon"></i>
+                    <h4>Music & Audio</h4>
+                    <p>Spotify Premium & Audio Services</p>
+                </div>
+            </div>
+            <!-- Learning & Productivity -->
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-graduation-cap service-icon"></i>
+                    <h4>Learning & Productivity</h4>
+                    <p>ChatGPT Plus, Perplexity AI Pro, LinkedIn Learning, Grammarly Premium, Canva Pro, AI Courses</p>
+                </div>
+            </div>
+            <!-- Finance Tools -->
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <h4>Finance & Market Tools</h4>
+                    <p>TradingView Premium</p>
+                </div>
+            </div>
+            <!-- VPN & Security -->
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-shield-alt service-icon"></i>
+                    <h4>VPN & Security Tools</h4>
+                    <p>ExpressVPN, NordVPN, Surfshark VPN</p>
+                </div>
+            </div>
+            <!-- Software & Keys -->
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-laptop-code service-icon"></i>
+                    <h4>Software & Keys</h4>
+                    <p>Microsoft 365, Windows Keys</p>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
 
-        <div style="margin-top:12px" class="small">Tip: Want a bundle? Tell us your use-case (e.g., "YouTube channel starter bundle") for a tailored price.</div>
-      </section>
-
-      <aside style="min-width:200px" class="card">
-        <h3 style="margin:0 0 8px 0">Quick Packages</h3>
-        <div class="grid-list">
-          <div class="service-item">
-            <h4 class="service-check">Starter Website</h4>
-            <div class="muted">Landing page, contact form, fast deploy</div>
-          </div>
-          <div class="service-item">
-            <h4 class="service-check">Creator Pack</h4>
-            <div class="muted">Video editing (up to 10min), thumbnail, jingle</div>
-          </div>
-          <div class="service-item">
-            <h4 class="service-check">Learning Pack</h4>
-            <div class="muted">ChatGPT+Canva Pro + Course bundle</div>
-          </div>
-          <div class="service-item">
-            <h4 class="service-check">Security Pack</h4>
-            <div class="muted">Cert vouchers + TryHackMe credits</div>
-          </div>
-          <div class="service-item">
-            <h4 class="service-check">Web Testing Pack</h4>
-            <div class="muted">Pen-testing + vulnerability report</div>
-          </div>
+<!-- Web & Media Services -->
+<section class="page-section bg-light" id="webservices">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Web & Media Services</h2>
+            <h3 class="section-subheading">Website, Video & Marketing Solutions</h3>
         </div>
-
-        <div class="contact">
-          <h4 style="margin:10px 0 6px 0">Contact</h4>
-          <div class="muted">Telegram: <strong>@Ciphershade488</strong></div>
-          <div class="muted">Instagram: <strong>@hiphopking_488</strong></div>
-          <div class="muted">YouTube: <strong>@youngwaves21</strong></div>
-          <div style="margin-top:8px"><a href="#contact" class="btn btn-primary" style="text-decoration:none;display:inline-block">Get Quote</a></div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-laptop service-icon"></i>
+                    <h4>Website Designing</h4>
+                    <p>Modern and responsive websites tailored for your business.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-pencil-ruler service-icon"></i>
+                    <h4>Website Testing</h4>
+                    <p>Comprehensive testing & security audits for your web applications.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-video service-icon"></i>
+                    <h4>Video Editing & Camera Shooting</h4>
+                    <p>Professional video production, shooting, and editing for ads or content.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-microphone-alt service-icon"></i>
+                    <h4>Jingles for Ads</h4>
+                    <p>Custom jingles and music for brand promotions and ads.</p>
+                </div>
+            </div>
         </div>
-      </aside>
-    </main>
+    </div>
+</section>
 
-    <section id="packages" class="card" style="margin-top:18px">
-      <h3 style="margin:0 0 8px 0">Detailed Services & Examples</h3>
-      <div class="muted">Each service can be customized — below are common options. Reply with which service and use-case and we will give you a tailored quote.</div>
+<!-- Shop Section -->
+<section class="page-section" id="shop">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Cybersecurity Vouchers</h2>
+            <h3 class="section-subheading">Get certified with official exam vouchers at the best prices.</h3>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="service-card">
+                    <h4>CRTP</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service-card">
+                    <h4>CEH THEORY</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service-card">
+                    <h4>BSCP</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service-card">
+                    <h4>CCNA</h4>
+                </div>
+            </div>
+            <!-- Add other vouchers as needed -->
+        </div>
+        <div class="text-center mt-4">
+            <p class="text-muted">Extra Services: Movie tickets at offer price.</p>
+        </div>
+    </div>
+</section>
 
-      <div style="margin-top:14px" class="grid-list">
-        <div class="service-item">
-          <h4>Website Design</h4>
-          <div class="muted">Responsive design, contact form, CMS or static build, deployment to GitHub Pages or custom host.</div>
+<!-- Contact -->
+<section class="page-section" id="contact">
+    <div class="container text-center">
+        <h2 class="section-heading text-uppercase">Get in Touch</h2>
+        <p class="text-muted">Reach out via Instagram, Telegram, or LinkedIn.</p>
+        <div class="mt-3">
+            <a class="btn btn-custom mx-2" href="https://www.instagram.com/ciphershade488/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a class="btn btn-custom mx-2" href="https://t.me/Ciphershade488" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+            <a class="btn btn-custom mx-2" href="https://www.linkedin.com/in/gaurav-shukla-ciphershade-%E2%9C%A8-ab9b892b4/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
         </div>
-        <div class="service-item">
-          <h4>Video Editing</h4>
-          <div class="muted">Cutting, color-grade, transitions, subtitles, intro jingle (commercial quality).</div>
-        </div>
-        <div class="service-item">
-          <h4>Jingles & Audio</h4>
-          <div class="muted">Custom 10–30s jingle, mixing, master deliverables in MP3/WAV.</div>
-        </div>
-        <div class="service-item">
-          <h4>Accounts & Tools</h4>
-          <div class="muted">Streaming/music/productivity account provisioning and guidance (licenses/keys handled securely).</div>
-        </div>
-        <div class="service-item">
-          <h4>Web Testing</h4>
-          <div class="muted">Full vulnerability scanning, manual testing, exploitation proof-of-concept, detailed report, and mitigation advice.</div>
-        </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section id="contact" class="card" style="margin-top:18px">
-      <h3 style="margin:0 0 8px 0">Get In Touch</h3>
-      <p class="muted">Tell us briefly what you need and your budget. Example: "Website for my rap duo — 3 pages, contact form, YouTube embed. Budget: ₹5,000"</p>
+<!-- Footer-->
+<footer class="footer py-4 text-center">
+    <div class="container">
+        <p>&copy; 2025 Ciphershade488. All rights reserved.</p>
+    </div>
+</footer>
 
-      <form onsubmit="event.preventDefault();alert('Thanks! Message captured — copy the example and send via Telegram or Instagram.');" style="margin-top:10px">
-        <div style="display:flex;gap:8px;flex-direction:column">
-          <input placeholder="Your name or handle" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
-          <input placeholder="Service you want (e.g., Website, Video, Web Testing)" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
-          <textarea placeholder="Short description + budget" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
-          <div style="display:flex;gap:8px"><button class="btn btn-primary">Send (opens a modal)</button><button class="btn btn-ghost" type="reset">Clear</button></div>
-        </div>
-      </form>
-
-      <div style="margin-top:8px" class="small">Or message directly on Telegram/Instagram (links provided above). We usually reply within a few hours.</div>
-    </section>
-
-    <footer>
-      <div>© CipherShade — Crafted with care. Not affiliated with service brands listed above.</div>
-      <div style="margin-top:6px" class="small">To publish: replace your current index.html with this file in the repository root and push to GitHub. If you want, I can adapt this to a multi-page site or add real links/buttons next.</div>
-    </footer>
-  </div>
-</body>
-</html>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
