@@ -11,171 +11,9 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" type="text/css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet" />
         
-        <style>
-            :root {
-                --cs-dark: #0a0a0a; /* Ultra Deep Background */
-                --cs-section-bg: #0f0f0f; /* Slightly Lighter Section Background */
-                --cs-primary: #B0FC38; /* Electric Chartreuse/Yellow for accents */
-                --cs-secondary: #ff00ff; /* Magenta/Bright Blue for icons */
-                /* Refined shadow - less glow, more crisp 3D effect */
-                --cs-shadow-card: 0 8px 15px rgba(0, 0, 0, 0.8), 0 0 5px rgba(176, 252, 56, 0.3); /* Deeper shadow, subtle highlight */
-                --cs-shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.9), 0 0 8px rgba(176, 252, 56, 0.6); /* More pronounced on hover */
-                --cs-text-shadow-heading: 0 0 5px rgba(176, 252, 56, 0.5); /* Subtle text shadow */
-                --cs-text-shadow-navbar: 0 0 3px rgba(176, 252, 56, 0.7); /* Navbar brand text shadow */
-            }
-
-            body {
-                background-color: var(--cs-dark);
-                color: #e0e0e0;
-                font-family: 'Montserrat', sans-serif; 
-                background-attachment: fixed;
-            }
-
-            /* Navigation */
-            #mainNav {
-                background-color: rgba(10, 10, 10, 0.95) !important;
-                border-bottom: 2px solid var(--cs-primary);
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            }
-            .navbar-brand {
-                color: #FFFFFF !important; 
-                text-shadow: var(--cs-text-shadow-navbar); 
-                font-family: 'Roboto Mono', monospace; 
-                font-size: 1.5rem;
-            }
-            .nav-link {
-                color: #e0e0e0 !important;
-            }
-            .nav-link:hover {
-                color: var(--cs-primary) !important;
-                text-shadow: var(--cs-text-shadow-heading);
-            }
-
-            /* Masthead */
-            .masthead {
-                padding: 12rem 0 8rem;
-                background-color: var(--cs-dark);
-            }
-            .masthead-subheading {
-                color: var(--cs-secondary);
-                font-size: 1.2rem;
-                font-family: 'Roboto Mono', monospace; 
-            }
-            .masthead-heading {
-                color: #ffffff;
-                text-shadow: var(--cs-text-shadow-heading); /* Subtle shadow for headings */
-            }
-
-            /* Section Styling */
-            .page-section {
-                padding: 6rem 0;
-                background-color: var(--cs-section-bg);
-            }
-            .section-heading {
-                color: var(--cs-primary);
-                text-shadow: var(--cs-text-shadow-heading); 
-                font-family: 'Roboto Mono', monospace; 
-            }
-            .section-subheading {
-                color: #a0a0a0 !important;
-                font-family: 'Montserrat', sans-serif;
-            }
-
-            /* Cards and Items - Refined 3D Highlight (Less Glow) */
-            .service-card, .voucher-card {
-                background-color: #1a1a1a;
-                border: 1px solid rgba(176, 252, 56, 0.2); /* Softer border */
-                border-radius: 10px;
-                padding: 2rem;
-                margin-bottom: 1.5rem;
-                height: 100%;
-                transition: all 0.4s ease-in-out;
-                box-shadow: var(--cs-shadow-card); /* Less glow, more depth */
-                text-align: center;
-            }
-            .service-card:hover, .voucher-card:hover {
-                background-color: #222222; 
-                box-shadow: var(--cs-shadow-hover); /* More pronounced hover, but still controlled */
-                transform: translateY(-5px); 
-            }
-            .service-icon {
-                font-size: 3rem;
-                color: var(--cs-secondary);
-                text-shadow: 0 0 5px var(--cs-secondary); /* Less intense glow for icons */
-                margin-bottom: 1rem;
-            }
-            .card-title {
-                color: #FFFFFF; 
-                font-size: 1.6rem; 
-                margin-bottom: 1rem;
-                text-shadow: 0 0 2px rgba(0, 0, 0, 0.4); /* Subtle text shadow for definition */
-            }
-
-            /* Specific List Styling */
-            .list-group-item {
-                background-color: transparent !important;
-                color: #e0e0e0;
-                border: none;
-                padding: 0.5rem 0;
-                font-size: 0.9rem;
-            }
-            .list-group-item i {
-                color: var(--cs-primary); 
-            }
-            
-            /* Buttons */
-            .btn-primary, .btn-success {
-                background-color: var(--cs-primary);
-                border-color: var(--cs-primary);
-                color: var(--cs-dark) !important;
-                font-weight: bold;
-                transition: all 0.3s ease-in-out;
-            }
-            .btn-primary:hover, .btn-success:hover {
-                background-color: #92e022; /* Slightly darker yellow on hover */
-                border-color: #92e022;
-                box-shadow: 0 0 10px rgba(176, 252, 56, 0.7); /* Subtle button glow */
-            }
-
-            .btn-whatsapp {
-                background-color: #25d366; 
-                border-color: #25d366;
-                color: #ffffff !important;
-                font-weight: bold;
-            }
-            .btn-whatsapp:hover {
-                background-color: #128c7e;
-                border-color: #128c7e;
-                box-shadow: 0 0 10px rgba(37, 211, 102, 0.6);
-            }
-            
-            /* Image Slots - For your images */
-            .img-slot {
-                height: 80px; /* Standard height for logos */
-                margin-bottom: 1rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden; /* Ensure images fit */
-            }
-            /* Add this if you want a border around the image slot itself */
-            .img-slot img {
-                max-height: 100%;
-                width: auto;
-                max-width: 100%; /* Ensure images don't overflow */
-                object-fit: contain; /* Maintain aspect ratio */
-                filter: brightness(1.2); /* Slightly brighten logos if needed on dark bg */
-            }
-
-
-            /* Footer */
-            .footer {
-                background-color: #0d0d0d;
-                border-top: 1px solid rgba(176, 252, 56, 0.1); 
-            }
-        </style>
-    </head>
+        </head>
     <body id="page-top">
         
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -198,7 +36,7 @@
 
         <header class="masthead">
             <div class="container text-center">
-                <div class="masthead-subheading">ACCESS GRANTED</div>
+                <div class="masthead-subheading">WELCOME SIR/MA'AM // ACCESS GRANTED</div>
                 <div class="masthead-heading text-uppercase">Your One-Stop Digital & Cybersecurity Hub</div>
                 <a class="btn btn-primary btn-xl text-uppercase mt-4" href="#digital-services">Explore Services</a>
             </div>
@@ -214,9 +52,7 @@
             
             <div class="col-lg-4 col-md-6">
                 <div class="service-card">
-                    <div class="img-slot">
-                        <img src="assets/streaming-logos.png" alt="OTT & Streaming Logos" />
-                    </div>
+                    <div class="img-slot">**IMAGE PLACEHOLDER**: Streaming service logos (Amazon, Disney+, etc.)</div>
                     <h4 class="card-title">🎬 OTT & Streaming</h4>
                     <ul class="list-group list-group-flush text-start">
                         <li class="list-group-item"><i class="fas fa-check me-2"></i>Amazon Prime Video</li>
@@ -229,9 +65,7 @@
             
             <div class="col-lg-4 col-md-6">
                 <div class="service-card">
-                    <div class="img-slot">
-                        <img src="assets/productivity-logos.png" alt="Learning & Productivity Logos" />
-                    </div>
+                    <div class="img-slot">**IMAGE PLACEHOLDER**: ChatGPT, LinkedIn Learning, Canva logos</div>
                     <h4 class="card-title">🎓 Learning & Productivity</h4>
                     <ul class="list-group list-group-flush text-start">
                         <li class="list-group-item"><i class="fas fa-check me-2"></i>ChatGPT Plus, Perplexity AI Pro</li>
@@ -244,9 +78,7 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="service-card">
-                    <div class="img-slot">
-                        <img src="assets/software-security-logos.png" alt="VPN, Software & Keys Logos" />
-                    </div>
+                    <div class="img-slot">**IMAGE PLACEHOLDER**: VPN, Windows, Microsoft logos</div>
                     <h4 class="card-title">🌐 VPN, Software & Keys</h4>
                     <ul class="list-group list-group-flush text-start">
                         <li class="list-group-item"><i class="fas fa-check me-2"></i>ExpressVPN, NordVPN, Surfshark VPN</li>
@@ -375,7 +207,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-4 text-lg-start text-muted small">Copyright &copy; CipherShade488 2025</div>
-            <div class="col-lg-4 my-3 my-lg-0">
+            <div class="col-lg-4 my-0 text-center"> 
                 <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ciphershade488/" target="_blank" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
@@ -396,5 +228,6 @@
 
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>
