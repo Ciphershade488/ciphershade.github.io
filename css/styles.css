@@ -55,18 +55,17 @@ header.masthead .masthead-heading { color:#fff; text-shadow:var(--cs-shadow); fo
   padding: 5px;
   box-sizing: border-box;
 }
-/* --- CARDS (3D Look) --- */
-/* ... (Keep existing .service-card and .voucher-card styles) ... */
 
-.card-title {
+.card-title 
+{
     color: #FFFFFF;
     font-size: 1.6rem; 
     margin-bottom: 1.5rem; 
     font-weight: 700;
 }
 
-/* FIX 1: Adjusting the image container (the slot) */
-.img-slot {
+.img-slot 
+{
     /* Increased height for large square logos */
     max-height: 140px; 
     min-height: 100px; 
@@ -89,9 +88,6 @@ header.masthead .masthead-heading { color:#fff; text-shadow:var(--cs-shadow); fo
     height: auto; 
     object-fit: contain; /* Ensures the whole image fits without cropping */
     display: block;
-}
-
-/* ... (Keep the rest of the file unchanged) ... */
 }
 
 .list-group-item { background:transparent!important; color:#e0e0e0; border-bottom:1px dashed rgba(255,255,255,0.1)!important; padding:.45rem 0!important; text-align:left; line-height:1.2; }
