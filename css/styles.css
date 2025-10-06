@@ -55,14 +55,43 @@ header.masthead .masthead-heading { color:#fff; text-shadow:var(--cs-shadow); fo
   padding: 5px;
   box-sizing: border-box;
 }
+/* --- CARDS (3D Look) --- */
+/* ... (Keep existing .service-card and .voucher-card styles) ... */
+
+.card-title {
+    color: #FFFFFF;
+    font-size: 1.6rem; 
+    margin-bottom: 1.5rem; 
+    font-weight: 700;
+}
+
+/* FIX 1: Adjusting the image container (the slot) */
+.img-slot {
+    /* Increased height for large square logos */
+    max-height: 140px; 
+    min-height: 100px; 
+    padding: 10px; /* Added internal padding */
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed rgba(var(--cs-shadow-color), 0.3); 
+    border-radius: 5px;
+    background-color: #111;
+    overflow: hidden; 
+}
+/* FIX 2: Ensuring the 1024x1024 image scales correctly */
 .img-slot img {
-    max-width: 1024%;
-    max-height: 1024px;
-    height: auto;
-    width: auto;
-    object-fit: contain;
+    max-width: 100%;
+    /* Set a more generous max-height for the 1:1 aspect ratio logos */
+    max-height: 120px; 
+    width: auto; 
+    height: auto; 
+    object-fit: contain; /* Ensures the whole image fits without cropping */
     display: block;
-    margin: 0 auto;
+}
+
+/* ... (Keep the rest of the file unchanged) ... */
 }
 
 .list-group-item { background:transparent!important; color:#e0e0e0; border-bottom:1px dashed rgba(255,255,255,0.1)!important; padding:.45rem 0!important; text-align:left; line-height:1.2; }
