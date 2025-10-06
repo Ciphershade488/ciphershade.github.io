@@ -56,8 +56,8 @@ header.masthead .masthead-heading { color:#fff; text-shadow:var(--cs-shadow); fo
   box-sizing: border-box;
 }
 .img-slot img {
-    max-width: 95%;
-    max-height: 95px;
+    max-width: 1024%;
+    max-height: 1024px;
     height: auto;
     width: auto;
     object-fit: contain;
